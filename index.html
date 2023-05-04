@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+  <script src="./scripts.js"></script>
 
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -30,27 +31,38 @@
     <h1 style="display: none;">Free Trial Sign Up</h1>
     <div class="col-lg-6 mx-auto my-auto container" id="left-section">
       <h2>Learn to code by watching others</h2>
-
       <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
       but understanding how developers think is invaluable. </p>
     </div>
-
     <div class="col-lg-6 mx-auto my-auto">
-
-      <p class="text-center mx-auto" id="form-heading"><b>Try it free 7 days</b> then $20/mo. thereafter</p> <!--show this be a paragraph or something else? Form title?-->
-      <div class="form-block container">
-      <form action="#" class="was-validated">
-        <div class="col-lg-6 mx-auto">
-        <input class="input-lg" type="text" name="first-name" id="first-name" value="First Name" required>
-        <div class="invalid-feedback">First Name can not be empty</div>
-        <input type="text" name="last-name" id="last-name" value="Last Name">
-        <input type="email" name="email" id="email" value="Email Address">
-        <input type="text" name="password" id="password" value="Password">
-        <input class="btn btn-primary" type="submit" value="Claim your free trial">
+      <p class="text-center mx-auto" id="form-heading">
+        <b>Try it free 7 days</b> then $20/mo. thereafter
+      </p> <!--show this be a paragraph or something else? Form title?-->
+      <div class="form-block mx-auto">
+      <form action="#" class="" id="sign-up-form" novalidate>
+        <div class="mx-auto">
+          <div>
+            <input  type="text" name="first-name" id="first-name" placeholder="First Name" required>
+            <div class="invalid-feedback text-end">First Name can not be empty</div>
+          </div>
+          <div>
+            <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+            <div class="invalid-feedback text-end">Last Name can not be empty</div>
+          </div>
+          <div>
+            <input type="email" name="email" id="email" placeholder="Email Address" required>
+            <div class="invalid-feedback text-end" id="email-error-message">Email Address can not be empty</div>
+          </div>
+          <div>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <div class="invalid-feedback text-end">Password can not be empty</div>
+          </div>
+          <input id="form-button" class="btn btn-primary" type="submit" value="Claim your free trial" required>
         </div>
       </form>
-    
-      <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p> <!--Something other then paragraph?-->
+      <p id="form-footer" class="text-center">
+        By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+      </p> <!--Should I use something other than paragraph?-->
       </div>
     </div>
   </main>
@@ -58,7 +70,7 @@
   <footer  class="absolute-bottom">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/Vladmidir">Vlad Yaremchuk</a>.
     </p>
   </footer>
 </body>
